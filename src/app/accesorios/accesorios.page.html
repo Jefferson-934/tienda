@@ -1,0 +1,66 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-menu-button menu="menup"></ion-menu-button>
+      <ion-back-button  defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title> Accesorios </ion-title>
+    <ion-buttons slot="end">
+      <ion-button icon-only>
+        <ion-icon  name="search"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-avatar slot="end">
+      <img src="assets/img/4.jpg" >
+    </ion-avatar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="fondo1"></div>
+  <ion-grid>
+    <ion-row>
+
+      <ion-col>
+        <ion-card-content class="cardcontent" *ngFor="let Accesorios of this.accesorio.arrayAccesorios; let i=index">
+          <div *ngIf="i<this.accesorio.num_accesorios">
+          <ion-card-header>
+            <ion-card-title class="ion-text-center" style="color: black;">{{Accesorios.titulo}}</ion-card-title>
+            <ion-img [src]="Accesorios.imagen"></ion-img>
+           
+            <p style="color:black;font-size:20px; ;" class="ion-text-center">{{Accesorios.precio}} </p>
+
+          </ion-card-header>
+        </div>
+
+          <ion-item>
+            <ion-buttons slot="start">
+              <ion-button color="success">
+                <ion-icon icon-only name="cart" slot="start"></ion-icon>
+              </ion-button>
+              <ion-button color="warning" (click)="this.accesorio.arrayAccesorios.splice(i,1);">
+                <ion-icon icon-only name="trash" slot="start"></ion-icon>
+              </ion-button>
+
+
+            </ion-buttons>
+            <ion-icon name="heart" slot="end" color="danger"></ion-icon>
+            <ion-icon name="share-social" slot="end"></ion-icon>
+          </ion-item>
+        </ion-card-content>
+      </ion-col>
+
+
+    </ion-row>
+  </ion-grid>
+  <ion-infinite-scroll threshold="100px" (ionInfinite)="mostrarAccesorio($event)">
+    <ion-infinite-scroll-content loadingSpinner="crescent" loadingText="Cargando">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+  <ion-fab vertical="botton" horizontal="end" slot="fixed">
+    <ion-fab-button color="success" [routerLink]="['/addacce']">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
+

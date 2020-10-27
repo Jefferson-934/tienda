@@ -1,0 +1,82 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-menu-button menu="menup"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Acerca de
+    </ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button icon-only>
+        <ion-icon  name="search"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-avatar slot="end">
+      <img src="assets/img/1.jpg" >
+    </ion-avatar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  
+  <div class="fondo1"></div>
+
+  <ion-slides pager="true" >
+    <ion-slide *ngFor="let item of imgSlides">
+      <ion-card class="card-header" mode="ios" color="light">
+          <ion-card-header>
+            <ion-card-title class="ion-text-center" style="color: rgb(0, 98, 255);">{{item.titulo}}</ion-card-title>
+            <img [src]="item.img" alt="Recurso no encontrado" class="redonda">
+          </ion-card-header>
+          <ion-card-content>
+          </ion-card-content>
+        </ion-card>
+    </ion-slide>
+  </ion-slides>
+  <ion-card color="light">
+    <ion-card-header>
+Dirección
+    </ion-card-header>
+    <ion-card-content>
+      <ion-icon slot="start" name="pin" color="danger"></ion-icon>
+Av, Jorge Mosquera y calle Quito  
+  </ion-card-content>
+  <ion-card-header>
+    Contactos
+        </ion-card-header>
+        <ion-card-content>
+          <p><ion-icon slot="start" name="phone-portrait" color="tertiary"></ion-icon> Celular: 0986460761</p>
+          <p> <ion-icon slot="start" name="call" color="success"></ion-icon> Teléfono: 2310-336</p>
+          <p> <ion-icon slot="start" name="mail" color="warning"></ion-icon> E-mail: asterixstore@gmail.com</p>
+
+</ion-card-content>
+  </ion-card>
+  
+
+  
+
+  <!-- fab placed to the bottom start -->
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="warning">
+      <ion-icon name="arrow-up-circle"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top">
+      <ion-fab-button Href="https://www.facebook.com/">
+        <ion-icon name="logo-facebook" color="primary"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button Href="https://www.instagram.com/?hl=es-la" >
+        <ion-icon name="logo-instagram"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button Href=" https://web.whatsapp.com/">
+        <ion-icon name="logo-whatsapp" color="success"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+
+  
+
+  
+
+  
+</ion-content>

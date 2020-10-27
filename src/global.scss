@@ -1,0 +1,68 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+.fondo{
+    background: url("https://ak.picdn.net/shutterstock/videos/8435656/thumb/2.jpg  ");
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 94vh;
+    position: fixed;
+    background-size: cover;
+    background-position: center;
+    padding-top: 0px;
+}
+.fondo1{
+    background: url("https://cdn.pixabay.com/photo/2015/10/13/03/39/fashion-985556__340.jpg    ");
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 94vh;
+    position: fixed;
+    background-size: cover;
+    background-position: center;
+    padding-top: 0px;
+}
+
+.tab1{
+    overflow: unset !important;
+    height: 450px;
+    width: 300x;
+}
+.ion-img{
+    width: 30px;
+    height: 30px
+    ;
+}
+.ion-card-header{
+    position: relative;
+    top: 10px;
+}
+.ion-card-content{
+    position: relative;
+    text-align: justify;
+    top: 5px;
+}
+

@@ -1,0 +1,59 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-menu-button menu="menup"></ion-menu-button>
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title> Registro </ion-title>
+
+    <ion-avatar slot="end">
+      <img src="assets/img/4.jpg">
+    </ion-avatar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="fondo1"></div>
+  <ion-row>
+    <ion-col>
+      <ion-card>
+        <ion-card-content>
+          <ion-input type="text" placeholder="Artículo:" #articulo style="color:black;font-size:19px; ;"></ion-input>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <ion-card-content>
+          <ion-input type="text" placeholder="Imagen:" #img  style="color:black;font-size:19px; ;"></ion-input>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <ion-card-content>
+          <ion-input type="text" placeholder="Talla:" #talla  style="color:black;font-size:19px; ;"></ion-input>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <ion-card-content>
+          <ion-input type="text" placeholder="Precio:" #precio  style="color:black;font-size:19px; ;"></ion-input>
+          <ion-buttons color="secondary" >
+            <ion-button (click)="saveProduc(articulo,
+            img,
+            talla,
+            precio);">
+              <ion-icon slot="start" name="add"></ion-icon>
+              Guardar
+            </ion-button>
+            <ion-button [routerLink]="['/ninos']" >
+              <ion-icon slot="end" name="close-circle"></ion-icon>
+              Cancelar
+            </ion-button>
+          </ion-buttons>
+        </ion-card-content>
+      </ion-card>
+      
+     
+    </ion-col>
+
+  </ion-row>
+
+</ion-content>
+

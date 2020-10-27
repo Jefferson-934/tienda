@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-menu-button menu="menup"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Asterix Store
+    </ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button icon-only>
+        <ion-icon name="search"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-avatar slot="end">
+      <img src="assets/img/1.jpg">
+    </ion-avatar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="fondo1"></div>
+  <ion-card class="card-header" *ngFor="let Informacion of arrayInfo; let i=index">
+    <div *ngIf="i<num_informacion">
+      <ion-card-header>
+        <ion-card-title class="ion-text-center" style="color: rgb(0, 98, 255);">{{Informacion.titulo}}</ion-card-title>
+        <ion-img [src]="Informacion.imagen" class="redonda"></ion-img>
+      </ion-card-header>
+      <ion-card-content>
+        <p style="color:black;font-size:20px; ;" class="ion-text-center">{{Informacion.contenido}} </p>
+      </ion-card-content>
+    </div>
+  </ion-card>
+  <ion-infinite-scroll threshold="100px" (ionInfinite)="mostrarInfo($event)">
+    <ion-infinite-scroll-content loadingSpinner="crescent" loadingText="Cargando">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>
